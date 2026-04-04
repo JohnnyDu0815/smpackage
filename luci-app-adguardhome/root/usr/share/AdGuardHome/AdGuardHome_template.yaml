@@ -1,3 +1,6 @@
+#提交就可以直接用的配置模板文件。 user: root/password: root
+#a template config can be use with a apply. user: root/password: root
+
 http:
   pprof:
     port: 6060
@@ -6,30 +9,29 @@ http:
   session_ttl: 720h
 users:
   - name: root
-    password: $2a$10$q0KhpDJ0jFnJaUfwC/5Kpulshgh.wpcj9/bvXB5yP0KMMGg9QQy7.
+    password: $2y$10$dwn0hTYoECQMZETBErGlzOId2VANOVsPHsuH13TM/8KnysM5Dh/ve
 auth_attempts: 5
 block_auth_min: 15
 http_proxy: ""
-language: zh-cn
+language: ""
 theme: auto
 dns:
   bind_hosts:
     - 0.0.0.0
-  port: 55
+  port: 1745
   anonymize_client_ip: false
-  ratelimit: 20
-  ratelimit_subnet_len_ipv4: 24
-  ratelimit_subnet_len_ipv6: 56
+  ratelimit: 0
   ratelimit_whitelist: []
-  refuse_any: true
+  refuse_any: false
   upstream_dns:
-    - 127.0.0.1:7874
+  - 223.5.5.5
   upstream_dns_file: ""
   bootstrap_dns:
-    - 61.144.56.100
-    - 61.144.56.101
+  - 119.29.29.29
+  - 223.5.5.5
   fallback_dns: []
-  upstream_mode: parallel
+  all_servers: false
+  fastest_addr: false
   fastest_timeout: 1s
   allowed_clients: []
   disallowed_clients: []
@@ -43,7 +45,7 @@ dns:
   cache_size: 4194304
   cache_ttl_min: 0
   cache_ttl_max: 0
-  cache_optimistic: true
+  cache_optimistic: false
   bogus_nxdomain: []
   aaaa_disabled: false
   enable_dnssec: false
@@ -65,7 +67,6 @@ dns:
   serve_http3: false
   use_http3_upstreams: false
   serve_plain_dns: true
-  hostsfile_enabled: true
 tls:
   enabled: false
   server_name: ""
@@ -82,54 +83,24 @@ tls:
   private_key_path: ""
   strict_sni_check: false
 querylog:
-  dir_path: ""
   ignored: []
   interval: 24h
   size_memory: 1000
   enabled: true
   file_enabled: true
 statistics:
-  dir_path: ""
   ignored: []
-  interval: 24h
+  interval: 720h
   enabled: true
 filters:
   - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
     name: AdGuard DNS filter
     id: 1
   - enabled: true
     url: https://anti-ad.net/easylist.txt
     name: 'CHN: anti-AD'
-    id: 1705758463
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt
-    name: 'CHN: AdRules DNS List'
-    id: 1705758464
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt
-    name: AWAvenue Ads Rule
-    id: 1743174883
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt
-    name: AdGuard DNS Popup Hosts filter
-    id: 1743174884
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt
-    name: Dan Pollock's List
-    id: 1743174885
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt
-    name: OISD Blocklist Big
-    id: 1743174886
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt
-    name: Peter Lowe's Blocklist
-    id: 1743174887
-  - enabled: true
-    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt
-    name: Steven Black's List
-    id: 1743174888
+    id: 2
 whitelist_filters: []
 user_rules: []
 dhcp:
@@ -154,14 +125,13 @@ filtering:
   blocking_ipv6: ""
   blocked_services:
     schedule:
-      time_zone: UTC
+      time_zone: Local
     ids: []
   protection_disabled_until: null
   safe_search:
     enabled: false
     bing: true
     duckduckgo: true
-    ecosia: true
     google: true
     pixabay: true
     yandex: true
@@ -170,8 +140,6 @@ filtering:
   parental_block_host: family-block.dns.adguard.com
   safebrowsing_block_host: standard-block.dns.adguard.com
   rewrites: []
-  safe_fs_patterns:
-    - /usr/bin/AdGuardHome/data/userfilters/*
   safebrowsing_cache_size: 1048576
   safesearch_cache_size: 1048576
   parental_cache_size: 1048576
@@ -191,7 +159,6 @@ clients:
     hosts: true
   persistent: []
 log:
-  enabled: true
   file: ""
   max_backups: 0
   max_size: 100
@@ -203,4 +170,4 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 29
+schema_version: 27
