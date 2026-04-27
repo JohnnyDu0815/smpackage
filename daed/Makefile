@@ -5,8 +5,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=daed
-PKG_VERSION:=1.24.0
-PKG_RELEASE:=88
+PKG_VERSION:=1.27.0
+PKG_RELEASE:=89
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/daeuniverse/daed.git
