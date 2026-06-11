@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-suselogin
 PKG_VERSION=2.1
-PKG_RELEASE:=334
+PKG_RELEASE:=335
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
