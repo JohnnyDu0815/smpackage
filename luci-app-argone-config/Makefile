@@ -1,8 +1,6 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-argone-config
-PKG_VERSION:=0.9
-PKG_RELEASE:=14
 
 PKG_MAINTAINER:=jerrykuku <jerrykuku@qq.com>
 
