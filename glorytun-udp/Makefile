@@ -13,7 +13,7 @@ PKG_SOURCE_URL:=https://github.com/ysurac/glorytun.git
 PKG_SOURCE_VERSION:=null
 PKG_NAME:=glorytun-udp
 PKG_VERSION:=0.3.4
-PKG_RELEASE:=4
+PKG_RELEASE:=5
 PKG_LICENSE:=BSD-2-Clause
 PKG_LICENSE_FILES:=LICENSE
 
