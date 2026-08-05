@@ -7,9 +7,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=alist
-PKG_VERSION:=3.62.0
-PKG_WEB_VERSION:=3.62.0
-PKG_RELEASE:=146
+PKG_VERSION:=3.63.0
+PKG_WEB_VERSION:=3.63.0
+PKG_RELEASE:=147
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/AlistGo/alist/tar.gz/v$(PKG_VERSION)?
