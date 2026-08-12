@@ -10,10 +10,10 @@ include $(TOPDIR)/rules.mk
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/ysurac/glorytun.git
-PKG_SOURCE_VERSION:=null
+PKG_SOURCE_VERSION:=
 PKG_NAME:=glorytun-udp
 PKG_VERSION:=0.3.4
-PKG_RELEASE:=5
+PKG_RELEASE:=6
 PKG_LICENSE:=BSD-2-Clause
 PKG_LICENSE_FILES:=LICENSE
 
