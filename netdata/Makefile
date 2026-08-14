@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netdata
-PKG_VERSION:=2.10.0
-PKG_RELEASE:=29
+PKG_VERSION:=2.11.0
+PKG_RELEASE:=30
 
 PKG_MAINTAINER:=Josef Schlehofer <pepe.schlehofer@gmail.com>, Daniel Engberg <daniel.engberg.lists@pyret.net>
 PKG_LICENSE:=GPL-3.0-or-later
@@ -83,6 +83,8 @@ CMAKE_OPTIONS += \
 	-DENABLE_PLUGIN_SYSTEMD_JOURNAL=Off \
 	-DENABLE_PLUGIN_SYSTEMD_UNITS=Off \
 	-DENABLE_PLUGIN_XENSTAT=Off \
+	-DSQLITE_USE_GIT=On \
+	-DUSE_MOLD=Off \
 	-DENABLE_WEBRTC=Off
 
 define Package/netdata/conffiles
