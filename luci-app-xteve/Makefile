@@ -2,6 +2,8 @@
 
 include $(TOPDIR)/rules.mk
 
+PKG_VERSION:=1.0.2-r20260804
+PKG_RELEASE:=22
 
 LUCI_TITLE:=LuCI support for Xteve
 LUCI_PKGARCH:=all
