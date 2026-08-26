@@ -9,8 +9,8 @@ include $(TOPDIR)/rules.mk
 PKG_ARCH_kaiplus:=$(ARCH)
 
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.5
-PKG_RELEASE:=5
+PKG_VERSION:=1.0.6
+PKG_RELEASE:=6
 PKG_SOURCE:=$(PKG_NAME)-binary-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/istoreos/istoreos-app-hub/releases/download/kaiplus-runtime-v$(PKG_VERSION)/
 PKG_HASH:=skip
@@ -57,7 +57,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/sbin $(1)/usr/share/kaiplus/www $(1)/usr/share/kaiplus/defaults $(1)/usr/share/kaiplus/helpers $(1)/usr/share/linkeasefull/desktop-apps.d $(1)/etc/init.d $(1)/etc/config
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/kaiplus_bin.$(PKG_ARCH_kaiplus) $(1)/usr/sbin/kaiplus_bin
 	$(CP) $(PKG_BUILD_DIR)/www/* $(1)/usr/share/kaiplus/www/
-	$(INSTALL_DATA) ./files/logo.png $(1)/usr/share/kaiplus/www/logo.png
+	$(INSTALL_DATA) ../app-meta-kaiplus/logo.png $(1)/usr/share/kaiplus/www/logo.png
 	$(CP) $(PKG_BUILD_DIR)/defaults/* $(1)/usr/share/kaiplus/defaults/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/helpers/kaiplus_workspace_tool.* $(1)/usr/share/kaiplus/helpers/
 	$(INSTALL_DATA) ./files/kaiplus-plugin.json $(1)/usr/share/kaiplus/kaiplus-plugin.json
