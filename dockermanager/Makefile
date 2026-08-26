@@ -10,7 +10,7 @@ PKG_ARCH_DOCKERMANAGER:=$(ARCH)
 
 PKG_NAME:=dockermanager
 PKG_VERSION:=0.1.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_SOURCE:=$(PKG_NAME)-binary-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/istoreos/istoreos-app-hub/releases/download/dockermanager-runtime-v$(PKG_VERSION)/
 PKG_HASH:=skip
@@ -57,7 +57,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/sbin $(1)/usr/share/dockermanager/www $(1)/usr/share/linkeasefull/desktop-apps.d $(1)/etc/init.d $(1)/etc/config
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/docker-manager.$(PKG_ARCH_DOCKERMANAGER) $(1)/usr/sbin/docker-manager
 	$(CP) $(PKG_BUILD_DIR)/www/* $(1)/usr/share/dockermanager/www/
-	$(INSTALL_DATA) ../app-meta-dockermanager/logo.svg $(1)/usr/share/dockermanager/www/logo.svg
+	$(INSTALL_DATA) ./files/logo.svg $(1)/usr/share/dockermanager/www/logo.svg
 	$(INSTALL_DATA) ./files/dockermanager-plugin.json $(1)/usr/share/dockermanager/dockermanager-plugin.json
 	ln -sf /usr/share/dockermanager/dockermanager-plugin.json $(1)/usr/share/linkeasefull/desktop-apps.d/20-dockermanager-plugin.json
 	$(INSTALL_BIN) ./files/dockermanager.init $(1)/etc/init.d/dockermanager

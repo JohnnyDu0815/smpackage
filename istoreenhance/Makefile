@@ -12,7 +12,7 @@ PKG_ARCH_ISTOREENHANCE:=$(ARCH)
 PKG_NAME:=istoreenhance
 # use PKG_SOURCE_DATE instead of PKG_VERSION for compitable
 PKG_SOURCE_DATE:=0.7.16
-PKG_RELEASE:=38
+PKG_RELEASE:=39
 ARCH_HEXCODE:=
 ifeq ($(ARCH),x86_64)
 ARCH_HEXCODE=8664
@@ -91,7 +91,7 @@ define Package/$(PKG_NAME)/install
 		$(INSTALL_DATA) ./files/www/desktop-entry.js $(1)/usr/share/kspeeder/www/desktop-entry.js; \
 		$(INSTALL_DATA) ./files/www/index.html $(1)/usr/share/kspeeder/www/index.html; \
 	fi
-	$(INSTALL_DATA) ../app-meta-istoreenhance/logo.png $(1)/usr/share/kspeeder/www/logo.png
+	$(INSTALL_DATA) ./files/logo.png $(1)/usr/share/kspeeder/www/logo.png
 	ln -sf /usr/share/kspeeder/kspeeder-plugin.json $(1)/usr/share/linkeasefull/desktop-apps.d/20-kspeeder.json
 endef
 
