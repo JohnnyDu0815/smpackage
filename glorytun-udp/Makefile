@@ -13,7 +13,7 @@ PKG_SOURCE_URL:=https://github.com/ysurac/glorytun.git
 PKG_SOURCE_VERSION:=null
 PKG_NAME:=glorytun-udp
 PKG_VERSION:=0.3.4
-PKG_RELEASE:=7
+PKG_RELEASE:=8
 PKG_LICENSE:=BSD-2-Clause
 PKG_LICENSE_FILES:=LICENSE
 
@@ -34,7 +34,7 @@ endef
 TARGET_CFLAGS += -DGT_RUNDIR=\"\\\"/tmp\"\\\"
 
 define Package/$(PKG_NAME)/conffiles
-/etc/config/glorytun
+/etc/config/glorytun-udp
 endef
 
 define Build/Prepare
