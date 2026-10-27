@@ -19,6 +19,6 @@ define Package/luci-app-sysctl/conffiles
 /etc/sysctl.d/99-luci-sysctl.conf
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
