@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=UnblockNeteaseMusic
-PKG_VERSION:=0.28.0
-PKG_RELEASE:=157
+PKG_VERSION:=0.29.0
+PKG_RELEASE:=158
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/UnblockNeteaseMusic/server/tar.gz/v${PKG_VERSION}?
